@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRY's WebWorld</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -29,6 +30,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
         
         .webworld-text {
@@ -52,11 +54,6 @@
             }
         }
         
-        @media (max-width: 768px) {
-            .webworld-text {
-                font-size: 32px;
-            }
-        }
         .hero {
     min-height: 100vh;
     display: flex;
@@ -67,7 +64,6 @@
 }
 .hero-title {
     font-family: 'Inter', sans-serif;
-    font-size: 70px;
     font-weight: 900;
     color: white;
     margin-bottom: 24px;
@@ -79,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-title:hover {
@@ -116,15 +113,43 @@
     display: inline-block;
     transition: all 0.3s ease;
     cursor: pointer;
-    
 }
 
+/* Mobile Responsive Design with Tailwind */
+@media (max-width: 768px) {
+    .letter:hover {
+        transform: scale(1.2) translateY(-5px);
+    }
+    
+    .world-text:hover {
+        transform: scale(1.05);
+    }
+}
 
+@media (max-width: 480px) {
+    .letter:hover {
+        transform: scale(1.15) translateY(-3px);
+    }
+    
+    .world-text:hover {
+        transform: scale(1.03);
+    }
+}
+
+@media (max-width: 360px) {
+    .letter:hover {
+        transform: scale(1.1) translateY(-2px);
+    }
+    
+    .world-text:hover {
+        transform: scale(1.02);
+    }
+}
     </style>
 </head>
 <body>
     <div class="hero-overlay">
-        <h1 class="hero-title">
+        <h1 class="hero-title text-6xl md:text-7xl sm:text-4xl xs:text-5xl">
             <span class="letter">W</span>
             <span class="letter">E</span>
             <span class="letter">L</span>
@@ -136,7 +161,7 @@
             <span class="letter">T</span>
             <span class="letter">O</span>
         </h1>
-        <h1 class="hero-title">
+        <h1 class="hero-title text-6xl md:text-7xl sm:text-4xl xs:text-5xl">
             <span class="letter">T</span>
             <span class="letter">R</span>
             <span class="letter">Y</span>
